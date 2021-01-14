@@ -11,17 +11,20 @@ const setupInput = function(conn) {
       process.stdout.write('\n');
       process.exit();
     }
-    else if (key === 'w') {
+    while (key === 'w') {
       conn.write('Move: up');
     }
-    else if (key === 'a') {
+    while (key === 'a') {
       conn.write('Move: left');
     }
-    else if (key === 's') {
+    while (key === 's') {
       conn.write('Move: down');
     }
-    else if (key === 'd') {
+    while (key === 'd') {
       conn.write('Move: right');
+    }
+    if (key === 'r') {
+      conn.write('Say: Yoo');
     }
   });
   return stdin;
